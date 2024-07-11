@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Sort List of Integers</h2>
+  <form (ngSubmit)="onSubmit()" #sortForm="ngForm">
+    <div class="form-group">
+      <label for="numbers">Enter numbers (comma separated):</label>
+      <input type="text" id="numbers" class="form-control" required [(ngModel)]="numbers" name="numbers">
+    </div>
+    <button type="submit" class="btn btn-primary">Sort</button>
+  </form>
+
+  <div *ngIf="sortedNumbers !== null">
+    <h3>Sorted Numbers:</h3>
+    <p>{{ sortedNumbers }}</p>
+  </div>
+
+  <div *ngIf="error !== null">
+    <h3>Error:</h3>
+    <p>{{ error }}</p>
+  </div>
+</div>
